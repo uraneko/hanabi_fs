@@ -7,16 +7,15 @@
 	"type": "module",
 	"scripts": {
 		"test": "vitest",
-		"build": "pnpm run b:css; pnpm run b:ts",
-		"b:css": "lightningcss --minify --bundle --targets '>= 0.25%' -o ../app/dist/styles/momo_file_system.css --sourcemap -- src/styles.css",
+		"build": "pnpm b:css; pnpm b:ts",
+		"b:css": "lightningcss --minify --bundle --targets '>= 0.25%' -o ../../app/dist/styles/momo_file_system.css --sourcemap -- src/styles.css",
 		"b:ts": "rolldown -c",
+		"check": "tsc",
 		"doc": "typedoc src/**/*.ts"
 	},
-	"exports": {
-		"./*": "./src/*.ts"
-	},
+	"exports": {},
 	"devDependencies": {
-		"lightningcss": "^1.29.3",
+		"lightningcss-cli": "^1.29.3",
 		"momo_components": "link:../../momo_lib/src/components",
 		"momo_core": "link:../../momo_lib/src/core",
 		"rolldown": "1.0.0-beta.7",
