@@ -28,7 +28,6 @@
 		"noPropertyAccessFromIndexSignature": false
 	},
 	"files": [
-		"src/core.ts",
-		"src/parcel.ts"
+		"src/main.ts"
 	]
 }

@@ -11,6 +11,12 @@ importers:
       lightningcss:
         specifier: ^1.29.3
         version: 1.29.3
+      momo_components:
+        specifier: link:../../momo_lib/src/components
+        version: link:../../momo_lib/src/components
+      momo_core:
+        specifier: link:../../momo_lib/src/core
+        version: link:../../momo_lib/src/core
       rolldown:
         specifier: 1.0.0-beta.7
         version: 1.0.0-beta.7(typescript@5.8.2)

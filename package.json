@@ -2,14 +2,14 @@
 	"name": "momo_file_system",
 	"version": "0.1.0",
 	"license": "MIT",
-	"private": true,
 	"description": "",
 	"keywords": [],
 	"type": "module",
 	"scripts": {
 		"test": "vitest",
-		"build": "tsc",
-		"help": "tsc --help",
+		"build": "pnpm run b:css; pnpm run b:ts",
+		"b:css": "lightningcss --minify --bundle --targets '>= 0.25%' -o ../app/dist/styles/momo_file_system.css --sourcemap -- src/styles.css",
+		"b:ts": "rolldown -c",
 		"doc": "typedoc src/**/*.ts"
 	},
 	"exports": {
@@ -17,6 +17,8 @@
 	},
 	"devDependencies": {
 		"lightningcss": "^1.29.3",
+		"momo_components": "link:../../momo_lib/src/components",
+		"momo_core": "link:../../momo_lib/src/core",
 		"rolldown": "1.0.0-beta.7",
 		"typedoc": "^0.27.9",
 		"typescript": "^5.8.2",

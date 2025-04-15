@@ -1,0 +1,19 @@
+@import "components/files-tree.css";
+@import "components/files-meta.css";
+@import "components/files-menu.css";
+
+.pointer {
+	cursor: pointer;
+}
+
+.hidden {
+	display: none;
+}
+
+shadow-container#files {
+	justify-self: center;
+	width: 100%;
+	height: fit-content;
+	display: grid;
+	padding-bottom: 15px;
+}

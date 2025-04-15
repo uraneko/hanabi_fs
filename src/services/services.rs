@@ -1,9 +1,9 @@
 use std::collections::HashMap;
-use std::fs::{read_dir, read_to_string, DirEntry, Metadata};
+use std::fs::{DirEntry, Metadata, read_dir, read_to_string};
 use std::sync::LazyLock;
 use std::time::SystemTime;
 
-use actix_web::{get, web, Responder, Result as ActixResult};
+use actix_web::{Responder, Result as ActixResult, get, web};
 use chrono::{DateTime, Utc};
 use serde::Serialize;
 
@@ -201,6 +201,9 @@ pub async fn files_meta(dir: web::Path<String>) -> ActixResult<impl Responder> {
 //     let (years, months) = (months / 12, months % 12);
 // }
 
+#[deprecated(
+    note = "add icons in build step then fetch them through the app's icons service instead"
+)]
 pub(super) const FILES_MENU_ICONS: LazyLock<HashMap<String, String>> = LazyLock::new(|| {
     ["bin-down.svg", "bin-up.svg", "bin-del.svg", "bin-add.svg"]
         .into_iter()
