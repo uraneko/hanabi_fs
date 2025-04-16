@@ -1,6 +1,5 @@
-import { make, type Maybe } from "momo_core/core";
-import { Parcel } from "momo_core/parcel";
-import { ShadowContainer } from "momo_components/wrappers/container";
+import { Parcel } from "momo_lib/core/parcel";
+import { ShadowContainer } from "momo_lib/components/wrappers/container";
 
 import { files_tree as files_tree } from "./components/files-tree";
 import { files_meta as files_meta } from "./components/files-meta";

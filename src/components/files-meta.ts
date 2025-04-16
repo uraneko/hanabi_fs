@@ -1,5 +1,5 @@
-import { Parcel } from "momo_core/parcel";
-import { MatrixElement } from "momo_components/collections/matrix"
+import { Parcel } from "momo_lib/core/parcel";
+import { MatrixElement } from "momo_lib/components/collections/matrix"
 
 export async function files_meta(parcel: Parcel) {
 	parcel.header("Content-Type", "application/json");

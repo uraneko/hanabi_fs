@@ -1,5 +1,5 @@
-import { Parcel } from "momo_core/parcel";
-import { TreeElement } from "momo_components/collections/tree"
+import { Parcel } from "momo_lib/core/parcel";
+import { TreeElement } from "momo_lib/components/collections/tree"
 
 export async function files_tree(parcel: Parcel) {
 	parcel.header("Content-Type", "application/json");
