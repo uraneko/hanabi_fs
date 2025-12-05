@@ -11,15 +11,16 @@
 		"b:css": "lightningcss --minify --bundle --targets '>= 0.25%' -o ../../app/dist/styles/momo_file_system.css --sourcemap -- src/styles.css",
 		"b:ts": "rolldown -c",
 		"check": "tsc",
-		"doc": "typedoc src/**/*.ts"
+		"doc": "typedoc src/**/*.ts",
+		"postinstall": "node copy_icons.js"
 	},
 	"exports": {},
 	"devDependencies": {
-		"lightningcss-cli": "^1.29.3",
+		"lightningcss-cli": "^1.30.2",
 		"momo_lib": "link:../../momo_lib",
-		"rolldown": "1.0.0-beta.7",
-		"typedoc": "^0.27.9",
-		"typescript": "^5.8.2",
-		"vitest": "^3.0.8"
+		"rolldown": "1.0.0-beta.53",
+		"typedoc": "^0.28.15",
+		"typescript": "^5.9.3",
+		"vitest": "^4.0.15"
 	}
 }
